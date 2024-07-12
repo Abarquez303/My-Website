@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Recipes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="https://i.postimg.cc/qvtFgQ3r/finalimage.png" alt="Logo" class="logo">
+            <h1>Delicious Recipes</h1>
+        </div>
+        <button class="toggle-btn" id="toggle-btn">☰</button>
+    </header>
+    <nav>
+        <a href="#recipes">Recipes</a>
+        <a href="#tips">Cooking Tips</a>
+        <a href="#videos">Video Tutorials</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="hero-section">
+        <div class="hero-background" style="background-image: url('https://adashofmacros.com/wp-content/uploads/2023/05/Classic-Beef-Stew-1500x500-1.jpg');"></div>
+        <div class="hero-content">
+            <h1>Welcome to Delicious Recipes</h1>
+            <p>Discover the joy of cooking with our mouth-watering recipes and helpful cooking tips.</p>
+        </div>
+    </section>
+    
+    <div class="container">
+        <section id="recipes" class="section">
+            <h2>Featured Recipes</h2>
+            <div class="recipes">
+                <div class="card">
+                    <img src="https://i.postimg.cc/fy8zCZZ1/DK6A1906.jpg" alt="Recipe 1">
+                    <h3>Adobo</h3>
+                    <p>Adobo is a classic Filipino dish known for its savory and tangy flavor. It's made by marinating chicken or pork in soy sauce, vinegar, and spices, then simmering until tender. 
+                        This versatile dish is often considered the unofficial national dish of the Philippines and pairs perfectly with steamed rice.</p>
+                </div>
+                <div class="card">
+                    <img src="https://i.postimg.cc/hP8bS5s6/lainys-pork-sinigang-recipe-51606c8a78b1c41e91e048a810dfb251-300x300.png" alt="Recipe 2">
+                    <h3>Sinigang na Baboy (Pork Sinigang)</h3>
+                    <p>Sinigang na Baboy is a traditional Filipino soup characterized by its sour broth, usually made with tamarind. This comforting dish features tender pork and a variety of vegetables, offering a harmonious blend of tangy and savory flavors. 
+                        It is a popular choice for a hearty and warming meal.</p>
+                </div>
+                <div class="card">
+                    <img src="https://i.postimg.cc/ZRr0r1Wh/mercedsite-4-530x-2x.webp" alt="Recipe 3">
+                    <h3>Pancit Canton</h3>
+                    <p>Pancit Canton is a beloved Filipino noodle dish made with stir-fried egg noodles, meat, shrimp, and a colorful mix of vegetables. The dish is flavored with soy sauce and oyster sauce, giving it a savory taste. 
+                        It is commonly served during celebrations and gatherings, symbolizing long life and prosperity.</p>
+                </div>
+            </div>
+        </section>
+        <section id="tips" class="section">
+            <h2>Cooking Tips</h2>
+            <div class="tips">
+                <div class="card">
+                    <h3>1. Mise en Place (Everything in Its Place)</h3>
+                    <p>Before you start cooking, prepare and measure all your ingredients. Having everything ready and within reach will make the cooking process smoother and more efficient, 
+                        allowing you to focus on cooking without interruptions.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Taste as You Go</h3>
+                    <p>Regularly taste your food while cooking to ensure the flavors are balanced. Adjust seasoning as needed, whether it’s adding more salt, pepper, spices, or a touch of acid like lemon juice or vinegar. 
+                        This helps you achieve the desired taste in the final dish.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Use Fresh Ingredients</h3>
+                    <p>Whenever possible, use fresh ingredients for the best flavor and nutritional value. Fresh herbs, vegetables, and high-quality proteins can significantly elevate the taste of your dishes, 
+                        making them more vibrant and delicious.</p>
+                </div>
+            </div>
+        </section>
+        <section id="videos" class="section">
+            <h2>Video Tutorials</h2>
+            <div class="videos">
+                <div class="card">
+                    <img src="https://i.postimg.cc/fy8zCZZ1/DK6A1906.jpg" alt="Video 1">
+                    <h3>Video for Adobo</h3>
+                </div>
+                <div class="card">
+                    <img src="https://i.postimg.cc/hP8bS5s6/lainys-pork-sinigang-recipe-51606c8a78b1c41e91e048a810dfb251-300x300.png" alt="Video 2">
+                    <h3>Video for Pork Sinigang</h3>
+                </div>
+                <div class="card">
+                    <img src="https://i.postimg.cc/ZRr0r1Wh/mercedsite-4-530x-2x.webp" alt="Video 3">
+                    <h3>Video for Pancit Canton</h3>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="https://i.postimg.cc/qvtFgQ3r/finalimage.png" alt="Logo">
+            </div>
+            <div class="contact-info">
+                <p>Web Designer: Matthew T. Abarquez</p>
+                <p>Email: MattLawrenceA@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="close-btn">✖</button>
+        <h2>Sidebar Menu</h2>
+        <a href="#recipes">Recipes</a>
+        <a href="#tips">Cooking Tips</a>
+        <a href="#videos">Video Tutorials</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggle-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const sidebar = document.getElementById('sidebar');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
